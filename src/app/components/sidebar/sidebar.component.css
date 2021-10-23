@@ -1,0 +1,49 @@
+.aside {
+  width: 140px;
+  padding-left: 30px;
+  padding-right: 25px;
+  box-shadow: 8px 0 6px -6px rgb(0 0 0 / 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo p {
+  color: #332993;
+  font-weight: bold;
+  font-size: 23px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.nav-section {
+  margin-top: 40px;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+ul li {
+  list-style: none;
+  padding: 0px 0px 0px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+ul li:nth-child(3) {
+  color: #000000;
+}
+
+ul li:hover {
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.2);
+  cursor: pointer;
+}
+
+ul li:nth-child(3):hover {
+  box-shadow: none;
+}

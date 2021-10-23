@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  unsplashApi: 'jWOwE3nCFu1aHOXMhm0Dn6rA7ANJ7msVAfa7Qqs1ytc',
 };
 
 /*

@@ -1,0 +1,21 @@
+.filter {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.filter-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  box-shadow: 0 0 5px rgb(0 0 0 / 0.2);
+  width: 150px;
+  border-radius: 5px;
+}
+
+.filter-type p {
+  color: #868499;
+}
