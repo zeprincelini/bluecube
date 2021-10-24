@@ -1,1 +1,29 @@
-<p>image-grid works!</p>
+<div class="grid-container" *ngIf="apiData">
+  <div class="grid-item" *ngFor="let data of apiData">
+    <img src="{{ data.user.profile_image.large }}" alt="profile_image" />
+    <!-- <div class="details">
+      <p>{{ data.user.name }}</p>
+    </div> -->
+    <!-- <div class="location">
+      <svg-icon
+        src="../../../assets/icons/location.svg"
+        [svgStyle]="{ 'width.px': 10, height: 10, fill: '#868499' }"
+      ></svg-icon>
+      <p>{{ data.user.location }}</p>
+    </div> -->
+    <!-- <div class="btn">
+      <button>
+        <svg-icon
+          src="../../../assets/icons/heart.svg"
+          [svgStyle]="{ 'width.px': 10, height: 10, fill: '#ffffff' }"
+        ></svg-icon>
+      </button>
+      <button>
+        <svg-icon
+          src="../../../assets/icons/dislike.svg"
+          [svgStyle]="{ 'width.px': 10, height: 10, fill: '#ffffff' }"
+        ></svg-icon>
+      </button>
+    </div> -->
+  </div>
+</div>

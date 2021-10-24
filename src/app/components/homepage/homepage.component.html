@@ -1,46 +1,6 @@
 <div class="container">
   <app-sidebar></app-sidebar>
   <div class="main">
-    <div class="header">
-      <form action="">
-        <div class="search-icon">
-          <svg-icon
-            src="../../../assets/icons/search.svg"
-            [svgStyle]="{ 'width.px': 20, height: 20, fill: '#868499' }"
-          ></svg-icon>
-        </div>
-        <input
-          type="search"
-          name="searchbox"
-          placeholder="Find Something"
-          [(ngModel)]="searchText"
-        />
-        <div class="search-btn">
-          <button type="submit">Search</button>
-        </div>
-      </form>
-      <div class="notification">
-        <div class="bell">
-          <svg-icon
-            src="../../../assets/icons/bell.svg"
-            [svgStyle]="{ 'width.px': 20, height: 20, fill: '#3A319E' }"
-          ></svg-icon>
-          <div class="no">
-            <p>2</p>
-          </div>
-        </div>
-        <div class="user-image">
-          <img src="https://picsum.photos/200/300" alt="user" />
-          <div class="img-icon"></div>
-        </div>
-        <p class="user">Abigail</p>
-        <svg-icon
-          src="../../../assets/icons/down.svg"
-          [svgStyle]="{ 'width.px': 10, height: 10, fill: '#868499' }"
-        ></svg-icon>
-      </div>
-    </div>
-    <app-filter></app-filter>
-    <app-image-grid></app-image-grid>
+    <router-outlet></router-outlet>
   </div>
 </div>
