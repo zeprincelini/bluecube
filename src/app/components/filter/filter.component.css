@@ -19,3 +19,39 @@
 .filter-type p {
   color: #868499;
 }
+
+.filter-mobile {
+  margin-top: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.filter-mobile button {
+  background-color: #3a319e;
+}
+
+@media screen and (max-width: 768px) {
+  .filter {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .filter-mobile {
+    display: block;
+  }
+  .filter-mobile .filter-type {
+    height: 30px;
+    padding: 0px 10px;
+  }
+
+  .filter-type {
+    box-shadow: none;
+    margin-right: 15px;
+    gap: 0.4rem;
+  }
+  /* .filter {
+    display: none;
+  } */
+}

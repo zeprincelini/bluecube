@@ -1,4 +1,114 @@
 <div class="header">
+  <form action="" class="desktop-form">
+    <div class="search-icon">
+      <svg-icon
+        src="../../../assets/icons/search.svg"
+        [svgStyle]="{ 'width.px': 20, height: 20, fill: '#868499' }"
+      ></svg-icon>
+    </div>
+    <input
+      type="search"
+      name="searchbox"
+      placeholder="Find Something"
+      [(ngModel)]="searchText"
+    />
+    <div class="search-btn">
+      <button type="submit" (click)="onSearch()">Search</button>
+    </div>
+  </form>
+  <div style="display: flex; align-items: center">
+    <div class="menu" (click)="toggleSidebar()">
+      <svg-icon
+        src="../../../assets/icons/menu.svg"
+        [svgStyle]="{ 'width.px': 30, height: 30 }"
+        [class]="['menu-icon']"
+      ></svg-icon>
+    </div>
+    <div class="logo" (click)="toggleSidebar()">
+      <img
+        src="../../../assets/logo/bluecube3.png"
+        alt="bluecube logo"
+        width="30px"
+      />
+      <p>bluecube</p>
+    </div>
+  </div>
+  <div class="notification">
+    <div class="mobile-search-icon" (click)="toggleSearch()">
+      <svg-icon
+        src="../../../assets/icons/search.svg"
+        [svgStyle]="{ 'width.px': 20, height: 20, fill: '#868499' }"
+      ></svg-icon>
+    </div>
+    <div class="bell">
+      <svg-icon
+        src="../../../assets/icons/bell.svg"
+        [svgStyle]="{
+          'width.px': 20,
+          height: 20,
+          fill: '#3A319E',
+          cursor: 'pointer'
+        }"
+        (click)="toggleNotification()"
+      ></svg-icon>
+      <div class="no">
+        <p>3</p>
+      </div>
+      <div class="drop-down" *ngIf="display">
+        <div class="dm">
+          <img src="https://picsum.photos/200/300" alt="user" />
+          <div class="message">
+            <span>Michael liked you!</span>
+            <span>About 20 minutes ago.</span>
+          </div>
+          <svg-icon
+            src="../../../assets/icons/heart-fill.svg"
+            [svgStyle]="{ 'width.px': 20, height: 20 }"
+            [class]="['heart']"
+          ></svg-icon>
+        </div>
+        <hr style="opacity: 0.3" />
+        <div class="dm">
+          <img src="https://picsum.photos/200/300" alt="user" />
+          <div class="message">
+            <span>Jack liked you!</span>
+            <span>About 50 minutes ago.</span>
+          </div>
+          <svg-icon
+            src="../../../assets/icons/heart-fill.svg"
+            [svgStyle]="{ 'width.px': 20, height: 20 }"
+            [class]="['heart-fill']"
+          ></svg-icon>
+        </div>
+        <hr style="opacity: 0.3" />
+        <div class="dm">
+          <img src="https://picsum.photos/200/300" alt="user" />
+          <div class="message">
+            <span>Martin commented on your photo!</span>
+            <span>About 20 minutes ago.</span>
+          </div>
+          <svg-icon
+            src="../../../assets/icons/chat.svg"
+            [svgStyle]="{ 'width.px': 20, height: 20 }"
+            [class]="['chat']"
+          ></svg-icon>
+        </div>
+      </div>
+    </div>
+    <div class="user-image">
+      <img src="https://picsum.photos/200/300" alt="user" />
+      <div class="img-icon"></div>
+    </div>
+    <div class="user-name">
+      <p class="user">Abigail</p>
+      <svg-icon
+        src="../../../assets/icons/down.svg"
+        [svgStyle]="{ 'width.px': 10, height: 10, fill: '#868499' }"
+      ></svg-icon>
+    </div>
+  </div>
+</div>
+<div class="mobile-form" *ngIf="displaySearch">
   <form action="">
     <div class="search-icon">
       <svg-icon
@@ -16,37 +126,12 @@
       <button type="submit" (click)="onSearch()">Search</button>
     </div>
   </form>
-  <div class="notification">
-    <div class="bell">
-      <svg-icon
-        src="../../../assets/icons/bell.svg"
-        [svgStyle]="{ 'width.px': 20, height: 20, fill: '#3A319E' }"
-      ></svg-icon>
-      <div class="no">
-        <p>3</p>
-      </div>
-      <div class="drop-down">
-        <img src="https://picsum.photos/200/300" alt="user" />
-        <div class="message">
-          <p>Michael liked you!</p>
-          <p>About 20 minutes ago.</p>
-        </div>
-        <svg-icon
-          src="../../../assets/icons/heart-fill.svg"
-          [svgStyle]="{ 'width.px': 10, height: 10, fill: '#CB3632' }"
-        ></svg-icon>
-      </div>
-    </div>
-    <div class="user-image">
-      <img src="https://picsum.photos/200/300" alt="user" />
-      <div class="img-icon"></div>
-    </div>
-    <p class="user">Abigail</p>
-    <svg-icon
-      src="../../../assets/icons/down.svg"
-      [svgStyle]="{ 'width.px': 10, height: 10, fill: '#868499' }"
-    ></svg-icon>
-  </div>
+</div>
+<div
+  class="mobile-sidebar"
+  [ngStyle]="{ transform: sidebar ? 'translateX(0px)' : 'translateX(-600px)' }"
+>
+  <app-mobile-sidebar></app-mobile-sidebar>
 </div>
 <app-filter></app-filter>
 <app-image-grid [apiData]="data"></app-image-grid>

@@ -6,8 +6,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class ApiService {
-  getEndpoint = 'https://api.unsplash.com/photos';
-  searchEndpoint = 'https://api.unsplash.com/search/photos?query=';
+  getEndpoint = `https://api.unsplash.com/photos?client_id=${environment.unsplashApi}`;
+  searchEndpoint = `https://api.unsplash.com/search/photos?client_id=${environment.unsplashApi}&query=`;
   headers = new HttpHeaders().set(
     'authorization',
     `Client-ID ${environment.unsplashApi}`

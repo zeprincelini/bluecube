@@ -1,0 +1,45 @@
+ul li {
+  list-style: none;
+  padding: 0px 0px 0px 2px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #868499;
+}
+
+ul li:first-child a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #868499;
+  text-decoration: none;
+}
+
+ul li:nth-child(3) {
+  color: #000000;
+}
+
+.svgIcon {
+  fill: #868499;
+}
+
+.svgLink {
+  color: #868499;
+}
+
+.svgPeople {
+  color: #868499;
+}
+
+ul li:hover .svgIcon {
+  fill: #332993;
+}
+
+ul li:hover .svgLink {
+  color: #332993;
+}
+
+ul li:hover .svgPeople {
+  color: #332993;
+}

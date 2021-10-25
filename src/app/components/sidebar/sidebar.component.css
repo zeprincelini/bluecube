@@ -4,6 +4,7 @@
   padding-right: 25px;
   box-shadow: 8px 0 6px -6px rgb(0 0 0 / 0.2);
   height: 100%;
+  position: fixed;
 }
 
 .logo {
@@ -50,11 +51,45 @@ ul li:nth-child(3) {
 }
 
 ul li:hover {
-  color: #000000;
   box-shadow: 0 0 10px rgb(0 0 0 / 0.2);
   cursor: pointer;
 }
 
+ul li:hover p {
+  color: #000000;
+}
+
 ul li:nth-child(3):hover {
   box-shadow: none;
+}
+
+.svgIcon {
+  fill: #868499;
+}
+
+.svgLink {
+  color: #868499;
+}
+
+.svgPeople {
+  color: #868499;
+}
+
+ul li:hover .svgIcon {
+  fill: #332993;
+}
+
+ul li:hover .svgLink {
+  color: #332993;
+}
+
+ul li:hover .svgPeople {
+  color: #332993;
+}
+
+/*media query*/
+@media screen and (max-width: 768px) {
+  .aside {
+    display: none;
+  }
 }
