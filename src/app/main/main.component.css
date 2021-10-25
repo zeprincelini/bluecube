@@ -202,6 +202,10 @@ p.user {
   display: none;
 }
 
+.flow {
+  position: fixed;
+}
+
 @media screen and (max-width: 768px) {
   .header {
     justify-content: space-between;

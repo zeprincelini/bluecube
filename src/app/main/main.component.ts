@@ -38,5 +38,10 @@ export class MainComponent implements OnInit {
 
   toggleSidebar() {
     this.sidebar = !this.sidebar;
+    if (this.sidebar) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   }
 }
